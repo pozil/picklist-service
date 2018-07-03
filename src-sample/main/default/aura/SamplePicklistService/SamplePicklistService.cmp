@@ -1,0 +1,32 @@
+<aura:component access="public">
+    <aura:attribute access="private" type="String" name="objectName" default="Account"/>
+    <aura:attribute access="private" type="String" name="fieldName" default="Industry"/>
+    <aura:attribute access="private" type="Map" name="entries"/>
+    <aura:attribute access="private" type="Map" name="selectedEntry"/>
+    <aura:attribute access="private" type="String" name="entriesAsJson"/>
+
+    <c:PicklistService aura:id="picklistService"/>
+
+    <lightning:card title="Sample Picklist">
+        <div class="slds-p-horizontal_medium">
+            <lightning:layout pullToBoundary="small">
+                <lightning:layoutItem size="6" flexibility="auto" padding="around-small">
+                    <lightning:input name="objectName" required="true" value="{!v.objectName}" label="Object Name"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" flexibility="auto" padding="around-small">
+                    <lightning:input name="fieldName" required="true" value="{!v.fieldName}" label="Field Name"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <div class="slds-align_absolute-center slds-m-top_small">
+                <lightning:button variant="brand" label="Load picklist entries" onclick="{!c.loadEntries}" disabled="{!or(empty(v.objectName), empty(v.fieldName))}"/>
+            </div>
+
+            <div class="{!empty(v.entries) ? 'slds-hide' : 'slds-m-top_medium'}">
+                <lightning:combobox name="values" label="Picklist entries" value="{!v.selectedEntry}" options="{!v.entries}" placeholder="Picklist entries" class="slds-m-bottom_small"/>
+                <lightning:textarea name="json" label="Picklist entries as JSON" value="{!v.entriesAsJson}" disabled="true"/>
+            </div>
+        </div>
+    </lightning:card>
+    
+
+</aura:component>

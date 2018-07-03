@@ -1,0 +1,7 @@
+<aura:component access="global" controller="PicklistServiceController">
+    <aura:method access="global" name="getEntries" action="{!c.getEntriesMethod}" description="Retrieve picklist entries">
+        <aura:attribute type="String" name="objectName" required="true" description="Object name"/>
+        <aura:attribute type="String" name="fieldName" required="true" description="Field name"/>
+        <aura:attribute type="Function" name="callback" required="true" description="Callback function that returns the picklist entries"/>
+    </aura:method>
+</aura:component>	
