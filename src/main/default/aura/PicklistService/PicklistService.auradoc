@@ -1,6 +1,8 @@
 <aura:documentation>
-	<aura:description>Documentation</aura:description>
-	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
-		Example Description
-	</aura:example>
+	<aura:description>
+		<p>This is a generic and reusable Lightning component that retrives any picklist entries based on an object name and a field name.<br/>
+		This is a service component so it has no user interface of it's own: it is meant to be called by other components.</p>
+
+		<p>See the <code>getEntries</code> Aura method for usage.</p>
+	</aura:description>
 </aura:documentation>
