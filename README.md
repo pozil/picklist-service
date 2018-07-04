@@ -29,7 +29,19 @@ component.find('picklistService').getEntries(objectName, fieldName, entries => {
 });
 ```
 
-The entries can then directly be used in a `lightning:combobox` component:
+Entries are returned as an Array of JS Object:
+```json
+[
+    {
+        "value": "Agriculture",
+        "label": "Agriculture",
+        "isDefaultValue": false
+    },
+    ...
+]
+```
+
+Entries can directly be used in a `lightning:combobox` component:
 ```xml
 <lightning:combobox name="values" label="Picklist entries" options="{!v.entries}"/>
 ```
