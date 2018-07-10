@@ -1,7 +1,7 @@
-# Salesforce Lightning Server Side Actions Service Component
+# Salesforce Lightning Picklist Service Component
 
 ## About
-This is a generic and reusable Lightning component that retrives any picklist entries.<br/>
+This is a generic and reusable Lightning component that retrieves any picklist entries.<br/>
 This is a service component so it has no user interface of it's own: it is meant to be called by other components.
 
 <b>Features</b>
