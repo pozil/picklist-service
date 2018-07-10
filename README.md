@@ -24,7 +24,8 @@ Use the service by adding the component to a parent component's markup:
 
 Then, simply call the service from the parent's component controller like this:
 ```js
-component.find('picklistService').getEntries(objectName, fieldName, entries => {
+// Getting picklist entries for Account.Industry field
+component.find('picklistService').getEntries('Account', 'Industry', entries => {
     console.log(entries);
 });
 ```

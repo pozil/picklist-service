@@ -3,6 +3,34 @@
 		<p>This is a generic and reusable Lightning component that retrives any picklist entries based on an object name and a field name.<br/>
 		This is a service component so it has no user interface of it's own: it is meant to be called by other components.</p>
 
+		<p>Use the service by adding the component to a parent component's markup:</p>
+
+		<pre>&lt;c:PicklistService aura:id="picklistService"/&gt;</pre>
+		
+		<p>Then, simply call a server-side action from the parent's component controller like this:</p>
+
+<pre>
+// Getting picklist entries for Account.Industry field
+component.find('picklistService').getEntries('Account', 'Industry', entries => {
+	console.log(entries);
+});
+</pre>
+
+		<p>Entries are returned as an Array of JS Object:</p>
+<pre>
+[
+    {
+        "value": "Agriculture",
+        "label": "Agriculture",
+        "isDefaultValue": false
+    },
+    ...
+]
+</pre>
+
+		<p>Entries can directly be used in a <code>lightning:combobox</code> component:</p>
+		<pre>&lt;lightning:combobox name="values" label="Picklist entries" options="{!v.entries}"/&gt;</pre>
+
 		<p>See the <code>getEntries</code> Aura method for usage.</p>
 	</aura:description>
 </aura:documentation>
