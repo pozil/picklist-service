@@ -11,6 +11,10 @@ The component provides the following features:
 - integrated error notifications (developer console + toast notifications in Lightning Experience)
 - storable actions for client-side cache
 
+<div align="center">
+    <img src="gfx/picklist-sample-app.png" alt="Sample app screenshot" width="60%"/>
+</div>
+
 ## Documentation
 The component is documented using Aura documentation.<br/>
 You can access it from this URL (replace the domain):<br/>
@@ -58,5 +62,3 @@ The default installation installs the component and a sample application availab
 https://<b>&lt;YOUR_DOMAIN&gt;</b>.lightning.force.com/c/SamplePicklistApp.app
 
 If you wish to install the project without the sample application, edit `sfdx-project.json` and remove the `src-sample` path.
-
-<img src="gfx/picklist-sample-app.png" align="center" alt="Sample app screenshot"/>
