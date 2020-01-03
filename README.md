@@ -1,5 +1,10 @@
 # Salesforce Lightning Picklist Service Component
 
+⚠️ This project is archived ⚠️
+
+Consider moving to Lightning Web Components. See the 
+[Retrieving Picklist Values Without Using Apex](https://developer.salesforce.com/blogs/2019/12/retrieving-picklist-values-without-using-apex.html) blog post and the [sample LWC repository](https://github.com/pozil/picklist-buttons).
+
 ## About
 This is a generic and reusable Lightning component that retrieves any picklist entries.<br/>
 This is a service component so it has no user interface of it's own: it is meant to be called by other components.
