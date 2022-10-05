@@ -57,9 +57,7 @@ Entries can directly be used in a `lightning:combobox` component:
 ```
 
 ## Salesforce DX setup instructions
-Deploy the sample application with Salesforce DX by clicking on this button:
-
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com)
+Deploy the sample application with the Salesforce CLI.
 
 
 ## Sample application
